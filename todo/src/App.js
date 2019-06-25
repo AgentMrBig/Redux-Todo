@@ -1,7 +1,8 @@
 import React from 'react';
-import ToDoList from './components/ToDoList';
-import store from './store/index';
-import { Provider } from 'react-redux';
+import TodoList from './components/newTodoList';
+import Footer from './components/Footer'
+import AddTodo from './containers/AddTodo'
+import VisibleTodoList from './containers/VisibleTodoList'
 
 import './App.css';
 
@@ -9,9 +10,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Provider store={store}>
-          <ToDoList />
-        </Provider>
+        <AddTodo />
+        <VisibleTodoList />
+        <Footer />
+
+
 
       </header>
     </div>
