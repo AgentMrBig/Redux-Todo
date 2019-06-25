@@ -6,11 +6,12 @@ const Todo = ({ onClick, completed, text }) => (
     <LI
         onClick={onClick}
         style={{
-            textDecoration: completed ? 'line-through' : 'none'
+            textDecoration: completed ? 'line-through' : 'none',
+            backgroundColor: completed ? 'darkgray' : 'lightskyblue'
         }}
     >
         {text}
-    </LI>
+    </LI >
 )
 
 Todo.propTypes = {

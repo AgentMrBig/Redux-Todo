@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import { Button, Input, AddTodoContainer } from '../components/ToDoListStyles';
 
 const AddTodo = ({ dispatch }) => {
     let input
 
     return (
-        <div>
+        <AddTodoContainer>
             <form
                 onSubmit={e => {
                     e.preventDefault()
@@ -17,10 +18,10 @@ const AddTodo = ({ dispatch }) => {
                     input.value = ''
                 }}
             >
-                <input ref={node => (input = node)} />
-                <button type="submit">Add Todo</button>
+                <Input placeholder="What do you need todo?" ref={node => (input = node)} />
+                <Button type="submit">Add Todo</Button>
             </form>
-        </div>
+        </AddTodoContainer>
     )
 }
 

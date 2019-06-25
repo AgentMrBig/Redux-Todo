@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 var appFontSize = 'font-size: 1.5rem';
-var mainFont = `font-family: 'Istok Web', sans-serif`;
+var mainFont = `font-family: 'Acme', sans-serif;`;
 var mainFontColor = 'color: #99b5e9';
 var fieldBgColor = 'background-color: #565d69';
 
@@ -59,6 +59,7 @@ width: 75%;
 border-radius: 5px;
 text-align: center;
 border:none;
+margin: 20px;
 ${appFontSize};
 ${mainFont};
 ${fieldBgColor};
@@ -73,7 +74,7 @@ ${appFontSize};
 ${mainFont};
 border-radius: 5px;
 border: none;
-font-family: 'Acme', sans-serif;
+
 background-color: #8bbbb3;
 `
 
@@ -115,8 +116,11 @@ const FooterContainer = styled.div`
     align-items:center;
     height: 100px;
     width: 90%;
-    border: solid 1px blue;
+`
+
+const AddTodoContainer = styled.div`
+    display: flex;
 
 `
 
-export { ToDoMain, Header, InputContainer, ItemList, Input, Button, UL, LI, FooterContainer }
+export { ToDoMain, Header, InputContainer, ItemList, Input, Button, UL, LI, FooterContainer, AddTodoContainer }
